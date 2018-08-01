@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>通讯录应用</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="angular-1.4.6/angular.min.js"></script>
+    <script src="controller/indexController.js"></script>
+
+</head>
+
+<body>
+    <div class="container" ng-controller="AppCtrl">
+        <h1>通讯录应用</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>姓名</th>
+                    <th>email</th>
+                    <th>手机号</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input class="form-control" ng-model="contact.name">
+                    </td>
+                    <td>
+                        <input class="form-control" ng-model="contact.email">
+                    </td>
+                    <td>
+                        <input class="form-control" ng-model="contact.number">
+                    </td>
+                    <td>
+                        <button class="btn btn-primary" ng-click="addContact()">添加</button>
+                        <button class="btn btn-info" ng-click="updateContact()">更新</button>
+                    </td>
+                </tr>
+                <tr ng-repeat="contact in contactList">
+                    <td>{{contact.name}}</td>
+                    <td>{{contact.email}}</td>
+                    <td>{{contact.number}}</td>
+                    <td>
+                        <button class="btn btn-danger" ng-click="delContact(contact._id)">删除</button>
+                        <button class="btn btn-warning" ng-click="editContact(contact._id)">编辑</button>
+                    </td>
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "website-01",
+  "version": "1.0.0",
+  "description": "演示demo",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mongojs": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "演示"
+  ],
+  "author": "wanglei",
+  "license": "ISC"
+}
